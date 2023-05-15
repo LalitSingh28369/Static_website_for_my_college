@@ -1,0 +1,119 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSIT</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body style="background-color:antiquewhite">
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jpg"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="placement.html">PLACEMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="links.html">EDUCATIONAL LINKS</a></li>
+                    <li><a href="section.html">MY_SECTION</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+            <h2>Contact Us</h2>
+    </section>
+    
+    <section class="location">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1pVlpm-D_Kp39XLLns4j3RqoyN2E&ehbc=2E312F" width="720" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    
+    <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>Kanpur - Agra - Delhi National Highway - 2 , Bhauti - Kanpur - 209305</h5>
+                            <p>Uttar_Pradesh, India </p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5>Toll Free. +91 7670998888 , 18001802233</h5>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope-o"></i>
+                        <span>
+                            <h5>info@psit.ac.in</h5>
+                            <p>Email us your query</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <form action="https://sheetdb.io/api/v1/bjlk63mn1d9qx" method="post" id="sheetdb-form" style="border:1px solid #ccc">
+                <div class="container">
+                  <p>Please let us know abou your queries.</p>
+                  <hr>
+
+                  <label for="Name"><b>Name</b></label>
+                  <input type="text" placeholder="Enter your name" name="data[Name]" required>
+              
+                  <label for="Email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="data[Email]" required>
+              
+                  <label for="Subject"><b>Subject</b></label>
+                  <input type="text" placeholder="Enter your subject" name="data[Subject]" required>
+              
+                  <label for="Message"><b>Message</b></label>
+                  <input type="text" placeholder="Enter your message" name="data[Message]" required>
+
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+              
+                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+              
+                  <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Send</button>
+                  </div>
+                </div>
+              </form>
+        <script>
+            var form = document.getElementById('sheetdb-form');
+            form.addEventListener("submit",e=>{
+                e.preventDefault();
+                fetch(form.action,{
+                    method : "POST",
+                    body : new FormData(document.getElementById("sheetdb-form")),
+                }).then(
+                    response=>response.json()
+                ).then(html) => {
+                    //put code js here
+                    window.open('s.html','_blank');
+            )};
+            });
+        </script>
+    </section>
+    
+<!-------- footer ---------->
+
+<section class="footer">
+        <h2>About Us</h2>
+        <p>Pranveer Singh Institute of Technology (PSIT), Kanpur is ranked 39th among Top Engineering across India by The Times of India and ranked 13th in Placements among all Private Engineering Institutes across India by The Times of India. PSIT stands out as a premier centre of higher learning with a mission of pursuing excellence in education and research.</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/psit.ac.in/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/psitkanpur2004?lang=en"><i class="fa fa-twitter "></i></a>
+            <a href="https://www.instagram.com/psitkanpur/?hl=en"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQGUJcGCwr949AAAAXz6mKwQl7yJ3RVKrtCRgFOSCkxrpyLRTxGWZDWXWPK7xSGE0Gq3Hj0U2RFo1wj__gSJA39_Jj6ZwAeTJ9E-6HB178Htj_O1NSE-dyrBk52Bqt-L5TNs24c=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2Fschool%2Fpsit-kanpur-pranveer-singh-institute-of-technology-%2F"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <p>PSIT <i class="fa fa-heart-o"></i> </p>
+</section>    
+</body>
+</html>    
